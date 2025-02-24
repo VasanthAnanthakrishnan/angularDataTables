@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+
 
 import { DataTablesModule } from "angular-datatables";
 import { TableDataService } from '../../Shared/TableData/table-data.service';
@@ -26,7 +26,7 @@ export class DatatableComponent {
   getProductDetails() {
     this.service.getAllProducts().subscribe((data: any) => {
       console.log(data, 'product details');
-      this.productDetails = data.data; // Ensure this is an array
+      this.productDetails = data.data;
     }, error => {
       console.error("Error fetching data:", error);
     });
