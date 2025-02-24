@@ -1,0 +1,23 @@
+
+
+
+<table datatable class="row-border hover" *ngIf="productDetails.length > 0">
+  <thead>
+    <tr>
+      <th>Product ID</th>
+      <th>Product Name</th>
+      <th>Product Price</th>
+      <th>Category Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of productDetails">
+      <td>{{ product.productId }}</td>
+      <td>{{ product.productName }}</td>
+      <td>{{ product.productPrice }}</td>
+      <td>{{ product.productShortName }}</td>
+    </tr>
+  </tbody>
+</table>
+
+
